@@ -26,14 +26,14 @@ def get_filters():
     while city not in cities:
         print('Please one of these 3 cities: Chicago, New York or Washington')
         city = input('Which city do you want to see data for Chicago, New York or Washington ?')
-        city = city.lower()
+        city = city.lower() # eliminate upper/lower case
 
 
     # get user input for month (all, january, february, ... , june)
     
     months = {'january': 1 ,'february': 2,'march': 3,'april': 4,'may': 5,'june': 6,'july': 7,'august': 8,'september': 9,'october': 10,'november': 11,'december': 12}
     month = input('Would you like to filter the data my month ? If it is yes enter which month. You can type "all" for no time filter')
-    month = month.lower()
+    month = month.lower() # eliminate upper/lower case
     
 
     if month != 'all':
@@ -59,7 +59,7 @@ def get_filters():
             day = days[day]
             
 
-    print('-'*40)
+    print('\n-'*40)
     return city,month,day
 
 
@@ -126,7 +126,7 @@ def time_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('\n-'*40)
 
 
 
@@ -152,7 +152,7 @@ def station_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('\n-'*40)
 
 
 
@@ -172,7 +172,7 @@ def trip_duration_stats(df):
     print('Mean travel time >> ',mean_travel)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('\n-'*40)
 
 
 def user_stats(city,df):
@@ -204,7 +204,7 @@ def user_stats(city,df):
     
     
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('\n-'*40)
 
 def view_data(df):
 
